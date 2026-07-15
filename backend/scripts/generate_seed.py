@@ -79,16 +79,28 @@ def seed_users(db: Session, departments: list):
     )
     db.add(cfo)
     db.commit()
+    
+    # Fetch all users to return
+    return db.query(User).all()
 
 def seed_vendors(db: Session):
     print("Seeding vendors...")
     vendors = []
+    
+    # Pre-defined discount tiers to simulate volume discounts
+    tiers = [
+        {"10": 0.05, "50": 0.15}, # 5% off for 10+, 15% off for 50+
+        {"20": 0.10, "100": 0.20},
+        {"5": 0.02, "25": 0.10}
+    ]
+    
     for _ in range(10):
         vendor = Vendor(
             name=fake.company(),
             rating=round(random.uniform(3.0, 5.0), 1),
             contact_email=fake.company_email(),
-            warranty_months=random.choice([12, 24, 36])
+            warranty_months=random.choice([12, 24, 36]),
+            discount_tiers=random.choice(tiers)
         )
         db.add(vendor)
         vendors.append(vendor)
@@ -132,6 +144,38 @@ def seed_products_and_vendor_products(db: Session, vendors: list):
     
     db.commit()
 
+from app.models import PurchaseRequest
+
+def seed_historical_requests(db: Session, users: list):
+    print("Seeding historical purchase requests...")
+    # Add a recent request for Engineering so we can test duplicate detection
+    eng_user = next((u for u in users if u.department.code == "ENG"), None)
+    if eng_user:
+        req = PurchaseRequest(
+            requester_id=eng_user.id,
+            title="Purchase 20 Laptops",
+            description="Need 20 laptops for the new engineering batch",
+            total_amount=40000.0,
+            status="approved",
+            created_at=datetime.utcnow()
+        )
+        db.add(req)
+        
+    # Add a recent request for Sales so we can test Demand Aggregation
+    sales_user = next((u for u in users if u.department.code == "SALES"), None)
+    if sales_user:
+        req2 = PurchaseRequest(
+            requester_id=sales_user.id,
+            title="Need 15 new laptops for sales team",
+            description="Laptops for Q3 expansion",
+            total_amount=30000.0,
+            status="pending",
+            created_at=datetime.utcnow()
+        )
+        db.add(req2)
+        
+    db.commit()
+
 def run():
     print("Starting database seed...")
     
@@ -152,9 +196,10 @@ def run():
 
         depts = seed_departments(db)
         seed_budgets(db, depts)
-        seed_users(db, depts)
+        users = seed_users(db, depts)
         vendors = seed_vendors(db)
         seed_products_and_vendor_products(db, vendors)
+        seed_historical_requests(db, users)
         
         print("Database seeded successfully!")
     finally:

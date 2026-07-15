@@ -89,6 +89,10 @@ class Vendor(Base):
     rating: Mapped[float] = mapped_column(Numeric(3, 2))
     contact_email: Mapped[str] = mapped_column(String(255))
     warranty_months: Mapped[int] = mapped_column(Integer, default=12)
+    
+    # [FEATURE] Dynamic discount tiers for volume discount logic
+    # Example: {"10": 0.10, "50": 0.20} -> 10% off for >= 10 units
+    discount_tiers: Mapped[Optional[dict]] = mapped_column(JSONB)
 
     vendor_products = relationship("VendorProduct", back_populates="vendor")
 

@@ -5,3 +5,8 @@
 5. Software licenses over $1000 require "Security Team" approval.
 6. The maximum lead time allowed for urgent requests is 5 days.
 7. Any purchase request must not exceed the department's remaining budget.
+
+# [DYNAMIC RULES: EDGE CASES]
+8. ROLE-BASED JUSTIFICATION: Only the "Engineering" and "Design" departments are allowed to request High-End/Gaming Laptops or MacBooks. If "Marketing", "HR", or "Sales" requests these, the AI MUST reject the request and ask for a special justification.
+9. MAVERICK SPEND (PREFERRED VENDORS): The company has an exclusive contract with "Dell" for IT equipment (Laptops, Servers, Monitors). If a user requests IT equipment from Apple, HP, or Lenovo, the AI MUST prompt the user to switch to Dell. If the user refuses, the request MUST be flagged and escalated to "C-Level" approval.
+10. BUDGET SPLITTING (SMURFING): The Auto-Approve threshold is $500. If a user's cumulative spend in the last 30 days for the same category exceeds $500, any new requests in that category CANNOT be auto-approved and MUST require "Manager" approval, even if the individual request is under $500.
