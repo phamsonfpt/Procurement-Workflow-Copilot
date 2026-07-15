@@ -1,0 +1,7 @@
+1. Laptops priced above $2000 require "Manager" approval.
+2. Servers and networking equipment purchases require "IT Director" approval regardless of price.
+3. Office furniture (Chair, Desk) under $500 is auto-approved by the system.
+4. Any purchase from a vendor with a reliability rating below 4.0 must have "Finance" approval to mitigate risks.
+5. Software licenses over $1000 require "Security Team" approval.
+6. The maximum lead time allowed for urgent requests is 5 days.
+7. Any purchase request must not exceed the department's remaining budget.

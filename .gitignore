@@ -1,0 +1,28 @@
+# Environments
+.env
+.env.*
+!.env.example
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+dist/
+build/
+.npm/
+
+# IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+.DS_Store
+Thumbs.db
