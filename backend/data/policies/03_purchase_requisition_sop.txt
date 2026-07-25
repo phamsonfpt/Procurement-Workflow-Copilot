@@ -1,0 +1,52 @@
+# TechCorp Vietnam - Purchase Requisition Standard Operating Procedure (SOP)
+Document ID: SOP-PROC-003
+Effective Date: January 1, 2026
+Version: 3.0
+
+## 1. Purpose
+This SOP details the step-by-step process for creating, submitting, and processing a Purchase Requisition (PR) to ensure all requests are handled systematically and efficiently.
+
+## 2. Step-by-Step Workflow
+
+### Step 1: Identify Need and Check Inventory
+- **Action**: Before creating a PR, the Requester must verify that the required item is not already available in internal inventory or covered by an existing enterprise license.
+- **SLA**: Immediate (Requester responsibility).
+
+### Step 2: Create Purchase Requisition (PR)
+- **Action**: The Requester logs into the Procurement System to create a new PR.
+- **Requirements**:
+  - Detailed specifications of the goods/services.
+  - Accurate quantities required.
+  - Required delivery date.
+  - Estimated budget or confirmed quote amount.
+  - Selection of the appropriate GL (General Ledger) code and cost center.
+
+### Step 3: Attach Supporting Documents
+- **Action**: The Requester uploads necessary documentation.
+- **Requirements**:
+  - For standard items under $5,000: Link to the vendor's catalog or a single quote.
+  - For items over $5,000: Minimum of three (3) competitive quotes or a completed Sole Source Justification form.
+  - Any required technical specifications, SOW (Statement of Work), or NDAs.
+
+### Step 4: Submit for Approval
+- **Action**: The PR is routed automatically based on the Approval Authority Matrix (POL-PROC-002) and Special Category Restrictions.
+- **SLA**: System routing happens instantly upon submission.
+
+### Step 5: Approval / Rejection Workflow
+- **Action**: Approvers receive notifications and review the PR.
+- **Outcomes**:
+  - **Approve**: PR moves to the next approver or directly to the Procurement team.
+  - **Reject**: PR is returned to the Requester with comments explaining the rejection.
+  - **Request More Info**: PR is paused until the Requester provides necessary clarifications.
+- **SLA**: Approvers are expected to action PRs within 48 hours.
+
+### Step 6: Conversion to Purchase Order (PO)
+- **Action**: Once fully approved, the PR is assigned to a Buyer.
+- **Process**:
+  - The Buyer validates the vendor, terms, and compliance.
+  - The PR is converted into a legally binding Purchase Order (PO).
+  - The PO is dispatched to the vendor electronically.
+- **SLA**: Within 24 hours of final PR approval for standard items; up to 5 days for complex contracts.
+
+## 3. Tracking and Visibility
+Requesters can track the real-time status of their PR through the Procurement Workflow Copilot dashboard.

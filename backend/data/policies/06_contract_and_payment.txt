@@ -1,0 +1,35 @@
+# TechCorp Vietnam - Contract and Payment Terms
+Document ID: POL-FIN-006
+Effective Date: January 1, 2026
+Version: 1.5
+
+## 1. Standard Payment Terms
+To optimize cash flow while maintaining strong vendor relationships, TechCorp Vietnam adheres to standardized payment schedules.
+- **Standard Term**: **Net 60 days** from the date of a valid, accepted invoice.
+- **Preferred Vendor Term**: **Net 30 days** (offered as an incentive for strategic partners).
+- **Exceptions**: Any requests for advanced payments, cash-on-delivery (COD), or terms shorter than Net 30 require written approval from the Finance Director.
+
+## 2. The 3-Way Matching Process
+To prevent fraud and ensure we only pay for what we receive, Finance utilizes a strict 3-way matching process before releasing any payment. An invoice will only be cleared for payment when the following three documents match in terms of quantity and price:
+1.  **Purchase Order (PO)**: The official order sent to the vendor.
+2.  **Goods Receipt Note (GRN)**: Proof of delivery or service completion.
+3.  **Invoice**: The bill provided by the vendor.
+
+## 3. Goods Receipt Note (GRN) Procedures
+- Upon delivery of goods or completion of services, the Requester or the Receiving Department must log into the system and create a GRN within 48 hours.
+- The GRN must accurately reflect the quantity accepted and the condition of the items.
+- Services require a signed timesheet, milestone sign-off, or acceptance certificate attached to the GRN.
+
+## 4. Partial Delivery Handling
+- If a vendor delivers an order in multiple shipments, the Requester must create a partial GRN for each shipment.
+- Finance will only process payment for the quantities explicitly marked as received in the partial GRN. The PO remains open until final delivery.
+
+## 5. Dispute Resolution
+If discrepancies arise between the PO, GRN, and Invoice (e.g., incorrect pricing, damaged goods):
+- Finance will place the invoice on a "Dispute Hold."
+- The Procurement Team will contact the vendor to resolve the issue (e.g., request a credit note or a revised invoice).
+- Payment timelines (e.g., Net 60) are paused during a dispute and restart only when a corrected invoice is received.
+
+## 6. Warranty and Return Policies
+- Contracts must stipulate a minimum 1-year warranty for all hardware and physical equipment unless otherwise negotiated.
+- The Procurement Team is responsible for initiating return merchandise authorizations (RMAs) for defective goods and ensuring credit notes are promptly issued by the vendor.

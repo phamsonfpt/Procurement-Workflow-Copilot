@@ -1,0 +1,34 @@
+# TechCorp Vietnam - Department-Specific Procurement Restrictions
+Document ID: POL-PROC-007
+Effective Date: January 1, 2026
+Version: 3.1
+
+## 1. Overview
+To ensure operational needs are met without unnecessary expenditure, certain procurement categories are restricted based on the requesting department's core function. This policy defines what specific departments are authorized to request.
+
+## 2. Department-Specific Allowances and Restrictions
+
+### Engineering and Design Departments
+- **Hardware Allowances**: Authorized to request high-performance computing equipment, including:
+  - High-end Windows laptops/workstations (e.g., Dell Precision series).
+  - Apple MacBooks (Pro models) if required for iOS development or specific design tools.
+  - Specialized peripherals (e.g., drawing tablets, multiple high-resolution monitors).
+- **Software Allowances**: Authorized to request specialized IDEs, CAD software, and enterprise design suites (e.g., Adobe Creative Cloud, AutoCAD).
+
+### Marketing, HR, Sales, and Admin Departments
+- **Standard Equipment**: Restricted to standard corporate equipment configurations (e.g., Dell Latitude series, standard dual monitors).
+- **Exceptions for High-End Equipment**: Requests for MacBooks, high-end laptops, or gaming-tier hardware from these departments are generally prohibited.
+  - **Override**: Exceptions require a detailed business justification demonstrating clear ROI, and must be approved by the Department VP and the IT Director.
+
+## 3. Company-Wide Procurement Rules
+
+### Office Supplies
+- **Auto-Approval**: Requests for standard consumable office supplies (e.g., pens, paper, notebooks) totaling **under $100** are automatically approved by the system.
+- Requesters must use the designated preferred vendor for office supplies (e.g., OfficeMax/Staples corporate catalog).
+
+### IT Equipment Governance
+- **Mandatory Review**: ALL purchases of IT hardware, networking equipment, or infrastructure—regardless of the monetary amount or the requesting department—MUST be routed through and approved by the **IT Director**. This ensures network compatibility, inventory management, and standardization.
+
+### Software and Security Governance
+- **Security Review**: ALL requests for new software licenses, SaaS subscriptions, or cloud services MUST undergo a review by the **Security Team**.
+- **Purpose**: To verify SOC2 compliance, data residency, GDPR/PDPA compliance, and overall cybersecurity posture before any contract is signed or software is installed on the corporate network.

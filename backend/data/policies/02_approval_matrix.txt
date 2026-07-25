@@ -1,0 +1,36 @@
+# TechCorp Vietnam - Approval Authority Matrix
+Document ID: POL-PROC-002
+Effective Date: January 1, 2026
+Version: 1.4
+
+## 1. Standard Approval Thresholds
+To balance operational efficiency with financial control, purchase requisitions (PRs) require approval based on their total estimated monetary value (in USD equivalent).
+
+- **Tier 1: Under $1,000**
+  - **Approver**: Auto-Approved (System Level)
+  - **Conditions**: Must be within the allocated department budget and from a preferred vendor. Excludes restricted categories.
+- **Tier 2: $1,000 to $10,000**
+  - **Approver**: Line Manager
+  - **Conditions**: Requires budget validation.
+- **Tier 3: $10,001 to $50,000**
+  - **Approver**: Department Head
+  - **Conditions**: Requires at least 3 competitive quotes or a sole-source justification.
+- **Tier 4: Over $50,000**
+  - **Approver**: Chief Financial Officer (CFO)
+  - **Conditions**: Requires a formal business case, full competitive tender process, and explicit CFO sign-off.
+
+## 2. Special Category Approvals
+Certain procurement categories carry additional risks or require specialized knowledge. These categories require secondary approvals regardless of the monetary value:
+- **IT Equipment (Hardware/Infrastructure)**: Requires approval from the **IT Director**.
+- **Software Licenses & SaaS Subscriptions**: Requires review and approval from the **Security Team** (to assess data privacy and cybersecurity risks) before final financial approval.
+- **Consulting & Legal Services**: Requires approval from the **General Counsel** or **HR Director**.
+- **Facilities & Office Modifications**: Requires approval from the **Facilities Manager**.
+
+## 3. Emergency Procurement Procedures
+In genuine emergencies where immediate action is required to prevent significant financial loss, operational downtime, or safety hazards:
+- The standard approval matrix may be temporarily bypassed.
+- Verbal or email approval from a Director or VP is sufficient to proceed.
+- A retrospective PR must be created and fully documented within 48 hours of the emergency event, clearly marked as "Emergency Procurement."
+
+## 4. Policy Enforcement
+Any attempt to split a single large purchase into multiple smaller PRs (smurfing) to bypass approval thresholds is a violation of policy. The system will flag cumulative spending in the same category over a 30-day period for manual review.

@@ -169,3 +169,23 @@ class EntityEmbedding(Base):
     text_content: Mapped[str] = mapped_column(Text, nullable=False)
     embedding = mapped_column(Vector(768)) # Default Gemini embedding dimension
     metadata_: Mapped[Optional[dict]] = mapped_column("metadata", JSONB)
+
+
+# =====================================================================
+# Hybrid Vector RAG Schema (BM25 + pgvector)
+# =====================================================================
+class DocumentChunk(Base):
+    """
+    Stores chunked policy documents for Hybrid Vector RAG.
+    - `embedding`: pgvector column for semantic search
+    - `content`: used with PostgreSQL tsvector for BM25 full-text search
+    """
+    __tablename__ = 'document_chunks'
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    content: Mapped[str] = mapped_column(Text, nullable=False)
+    source_file: Mapped[Optional[str]] = mapped_column(String(255))
+    chunk_index: Mapped[int] = mapped_column(Integer, default=0)
+    embedding = mapped_column(Vector(3072))  # Gemini text-embedding-004 dimension
+    metadata_: Mapped[Optional[dict]] = mapped_column("metadata", JSONB)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)

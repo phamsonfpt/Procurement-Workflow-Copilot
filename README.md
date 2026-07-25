@@ -1,80 +1,85 @@
-# Procurement Workflow Copilot
+# Procurement Workflow Copilot 🚀
 
-A highly autonomous, multi-agent AI copilot designed to streamline and automate corporate procurement workflows. 
-Powered by **LangGraph**, **Groq (Llama-3)**, and **Supabase**, this system acts as a team of specialized AI agents that collaborate to process purchase requests, search for products, evaluate vendors, enforce company policies, check budgets, and prepare final summaries for human review.
+A full-stack, enterprise-grade AI Procurement system built with **LangGraph**, **FastAPI**, **React**, and **PostgreSQL**. This project demonstrates how to orchestrate autonomous AI agents to handle corporate purchasing workflows, complete with dynamic policy enforcement, budget reservation, and Role-Based Access Control (RBAC).
 
-## 🌟 System Architecture (6-Agent LangGraph)
+---
 
-The core brain of this copilot is built using **LangGraph**, utilizing a State Graph to route tasks among 6 specialized AI nodes:
+## 🌟 Key Enterprise Features
 
-1. **Intake Node**: Analyzes the initial user request, extracts the desired product, budget, and urgency, and maps it to a department.
-2. **Search Node**: Searches the company's approved catalog (Database) or external sources for products matching the user's criteria.
-3. **Vendor Node**: Evaluates and selects the best vendor/supplier for the requested product based on price, reliability, and delivery speed.
-4. **Policy Node**: Checks the proposed purchase against the company's internal procurement policies (e.g., hardware budget limits, required approvals).
-5. **Budget Node**: Verifies if the requesting department has sufficient budget remaining for this purchase.
-6. **Human Review Node**: A final checkpoint that pauses the workflow, presenting a comprehensive summary of the AI's findings for a human manager to Approve or Reject.
+1. **AI Agentic Workflow (LangGraph)**
+   - The system is not a simple chatbot. It is a multi-agent orchestration pipeline where different AI nodes handle distinct business logics: `Intake -> Search -> Vendor Analysis -> Policy Check -> Budget Reservation -> Human Review`.
+   
+2. **Dynamic Approval Matrix & RBAC Security**
+   - The AI dynamically determines the required approval authority based on the purchase cost (e.g., `< $1000` goes to Line Manager, `>= $5000` requires CFO).
+   - **Backend Enforced**: Approvals are validated securely on the backend. Attempting to approve a high-value request with insufficient privileges throws an `Access Denied` error.
 
-All workflow states are persistently saved using **Postgres Checkpointer** via Supabase, allowing long-running tasks to be paused and resumed seamlessly.
+3. **Anti-Fraud & Smurfing Detection**
+   - The AI `Policy Checker` connects to the database to track cumulative employee spend over 30 days.
+   - If an employee attempts to bypass auto-approval limits by splitting large purchases into multiple small ones (Smurfing), the AI automatically flags the request and escalates the approval role to a Department Head.
+
+4. **Multi-Page Enterprise Dashboard (React Router)**
+   - Different users get completely different views:
+     - **Requester**: Simple chat interface to submit orders.
+     - **Manager / CFO**: Dashboard showing a queue of pending requests needing their approval.
+     - **Procurement Ops**: Global view of all corporate spend with the power to "Force Override" approvals.
+     - **IT Admin**: System monitor displaying server health, API quotas, and LangGraph trace logs.
+
+5. **State Persistence & Fault Tolerance**
+   - Powered by **Postgres Checkpointer**. Every step of the AI's thought process and every chat message is saved to PostgreSQL. If the server crashes mid-thought, the exact state is recovered immediately.
+
+---
 
 ## 🛠 Tech Stack
 
-- **Backend (AI & API):** Python 3.12, FastAPI, LangGraph, LangChain, SQLAlchemy.
-- **LLM Engine:** Groq API (Llama-3-70b/8b) for blazing-fast agentic reasoning.
-- **Database & State Management:** Supabase (PostgreSQL) + pgvector.
-- **Package Manager:** `uv` - an extremely fast Python package and project manager.
-- **Frontend:** React, TypeScript, Vite, TailwindCSS (to be fully integrated).
+- **Backend Architecture**: Python 3.12, FastAPI, LangGraph, LangChain.
+- **LLM Engine**: Groq (LLaMA 3.3 70B) for ultra-fast, ultra-cheap agentic reasoning.
+- **Frontend Architecture**: React 19, TypeScript, Vite, React Router, Tailwind-inspired Vanilla CSS.
+- **Database**: Supabase (PostgreSQL), `psycopg-pool`.
 
-## 🚀 Local Setup & Installation
+---
 
-### 1. Prerequisites
-- Python 3.12+ and `uv` installed.
-- Node.js 18+ and `npm`.
-- A Supabase account and project.
-- A Groq API Key.
+## 🎮 How to Demo the System
 
-### 2. Environment Variables
-Create a `.env` file in both `backend/` and `frontend/` (if needed) using `.env.example` as a template.
-For the backend (`backend/.env`):
-```env
-# Supabase Transaction Pooler (Port 6543)
-DATABASE_URL="postgresql://postgres.[PROJECT_ID]:[PASSWORD]@aws-0-ap-northeast-1.pooler.supabase.com:6543/postgres"
+The application comes with 6 pre-configured Active Directory (SSO) roles. Run the app and login with these emails to test different scenarios:
 
-# Groq LLM API Key
-GROQ_API_KEY="your_groq_api_key"
-```
+### Scenario 1: Auto-Approval ($100 Keyboard)
+1. Login with `employee@acme.corp` (Requester).
+2. Type: *"I need to buy a $100 mechanical keyboard."*
+3. The AI will search, check policies, reserve budget, and auto-approve without human intervention.
 
-### 3. Backend Setup
-The backend uses `uv` for lightning-fast dependency management.
-```bash
-cd backend
-uv sync
-```
+### Scenario 2: RBAC Matrix ($6000 Server)
+1. Login with `employee@acme.corp` (Requester).
+2. Type: *"Order a high-end AI Server for $6000."*
+3. The AI pauses the workflow and demands CFO approval.
+4. Try to type *"Approve"*. The backend will block you.
+5. Sign out. Login with `manager@acme.corp` (Line Manager). Try to approve. Blocked again!
+6. Sign out. Login with `cfo@acme.corp` (CFO). Open the pending thread and approve it successfully.
 
-### 4. Frontend Setup
-```bash
-cd frontend
-npm install
-```
+### Scenario 3: Global Operations Override
+1. Login with `ops@acme.corp` (Procurement Ops).
+2. You will see a global dashboard of ALL requests across the company.
+3. If a request is stuck pending for too long, click **Force Override** to bypass the approval chain.
 
-## 💻 Running the Application
+### Scenario 4: System Monitoring
+1. Login with `admin@acme.corp` (IT Admin).
+2. View the mock System Logs, API quotas, and Database Connection Pool health.
 
-**To run the AI Orchestrator Test Script (Terminal Mode):**
-```bash
-cd backend
-uv run python scripts/test_orchestrator_v2.py
-```
+---
 
-**To start the Backend API Server:**
-```bash
-cd backend
-uv run uvicorn app.main:app --reload
-```
+## 🚀 Running Locally
 
-**To start the Frontend Development Server:**
-```bash
-cd frontend
-npm run dev
-```
+1. **Backend**
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   uvicorn app.main:app --reload
+   ```
 
-## 📝 License
-MIT License
+2. **Frontend**
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+
+*Note: You must have a `GROQ_API_KEY` and `DATABASE_URL` (Supabase) in your backend `.env` file.*

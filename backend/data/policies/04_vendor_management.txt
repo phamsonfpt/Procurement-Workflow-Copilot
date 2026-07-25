@@ -1,0 +1,37 @@
+# TechCorp Vietnam - Vendor Selection and Management Policy
+Document ID: POL-PROC-004
+Effective Date: January 1, 2026
+Version: 1.2
+
+## 1. Vendor Registration and Qualification
+To ensure supply chain integrity, all vendors must undergo a qualification process before conducting business with TechCorp Vietnam.
+- **New Vendor Onboarding**: Vendors must submit a comprehensive registration form, including tax identification, business licenses, bank details, and compliance certifications.
+- **Due Diligence**: The Procurement team will conduct background checks, financial stability assessments, and compliance screenings (e.g., anti-bribery, sanctions lists).
+
+## 2. Preferred Vendor List (PVL) and Exclusive Contracts
+TechCorp Vietnam maintains a Preferred Vendor List to leverage economies of scale, ensure consistent quality, and streamline the purchasing process.
+- Requesters are strongly encouraged to use preferred vendors for all standard purchases.
+- **Exclusive Contracts**: For specific categories, exclusive enterprise agreements are in place. Examples include:
+  - **Dell**: Exclusive provider for all standard employee laptops, desktops, and monitors.
+  - **Steelcase**: Exclusive provider for all ergonomic office chairs and standard desks.
+- Purchases in these categories from non-exclusive vendors require explicit VP approval.
+
+## 3. Maverick Spend Policy
+Maverick spend (purchasing from non-preferred vendors when a preferred vendor exists) undermines negotiated discounts and introduces risk.
+- **Rule**: Any purchase request using a non-preferred vendor in a category where a preferred vendor exists requires a written justification.
+- **Approval**: Maverick spend PRs automatically escalate to the Vice President (VP) level for approval, regardless of the monetary amount.
+
+## 4. Vendor Rating Criteria
+Active vendors are continuously evaluated on a 5.0 scale based on the following criteria:
+- **Price (25%)**: Competitiveness and adherence to negotiated rates.
+- **Quality (35%)**: Conformance to specifications and defect rates.
+- **Delivery (25%)**: On-time delivery performance.
+- **Reliability & Support (15%)**: Responsiveness to issues, warranty claims, and customer service.
+
+## 5. Minimum Rating Threshold
+- Vendors must maintain a minimum overall rating of **4.0/5.0** to remain on the Preferred Vendor List.
+- Vendors whose ratings fall below 3.5 will be placed on probation and required to submit a Corrective Action Plan.
+
+## 6. Performance Reviews and Blacklisting
+- **Quarterly Reviews**: The Procurement team conducts quarterly business reviews (QBRs) with Top 20 strategic vendors based on spend volume.
+- **Blacklisted Vendors**: Vendors found guilty of unethical conduct, severe security breaches, or consistent failure to deliver will be added to the TechCorp Vietnam Blacklist. No POs may be issued to blacklisted vendors under any circumstances.

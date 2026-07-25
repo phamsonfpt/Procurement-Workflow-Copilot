@@ -14,6 +14,9 @@ class Settings(BaseSettings):
     # Supabase Settings (if needed for storage, etc.)
     SUPABASE_URL: str = os.getenv("SUPABASE_URL", "")
     SUPABASE_KEY: str = os.getenv("SUPABASE_KEY", "")
+
+    # LightRAG Settings
+    LIGHTRAG_WORKING_DIR: str = os.getenv("LIGHTRAG_WORKING_DIR", "./lightrag_data")
     
     class Config:
         env_file = ".env"

@@ -1,0 +1,36 @@
+# TechCorp Vietnam - Procurement Policy
+Document ID: POL-PROC-001
+Effective Date: January 1, 2026
+Version: 2.1
+
+## 1. Purpose and Scope
+This policy outlines the rules, principles, and procedures for procuring goods and services at TechCorp Vietnam. It applies to all employees, contractors, and affiliates who request, approve, or execute purchases on behalf of the company. The purpose is to ensure all procurement activities are conducted efficiently, transparently, and in alignment with our corporate objectives.
+
+## 2. Procurement Principles
+All procurement activities at TechCorp Vietnam must adhere to the following core principles:
+- **Transparency**: All procurement processes, from vendor selection to contract award, must be documented and open to audit.
+- **Fairness and Equal Opportunity**: All qualified vendors must be given a fair and equal opportunity to compete for TechCorp Vietnam's business.
+- **Value-for-Money**: Purchasing decisions must consider not just the lowest price, but the optimal combination of cost, quality, reliability, and lifecycle costs.
+- **Sustainability**: Preference should be given to environmentally friendly and socially responsible vendors where commercially viable.
+
+## 3. Roles and Responsibilities
+- **Requester**: Any employee who identifies a need for goods or services. Responsible for defining specifications, justifying the need, and creating the Purchase Requisition (PR).
+- **Buyer (Procurement Team)**: Responsible for sourcing vendors, negotiating terms, issuing Purchase Orders (POs), and managing vendor relationships.
+- **Approver**: Authorized personnel (e.g., Managers, Directors, VP) responsible for reviewing and approving PRs within their assigned budget and authority limits.
+- **Finance Team**: Responsible for budget allocation, verifying three-way matching (PO, GRN, Invoice), processing payments, and conducting audits.
+
+## 4. Procurement Methods
+Depending on the value and nature of the procurement, the following methods are used:
+- **Direct Purchase**: For low-value, standard items from preferred vendors.
+- **Competitive Bidding**: Requires at least three (3) competitive quotes for purchases exceeding $5,000 to ensure value for money.
+- **Sole Source**: Allowed only under exceptional circumstances (e.g., proprietary technology, exclusive distribution rights). Requires detailed justification and VP approval.
+
+## 5. Ethical Standards and Conflict of Interest
+All personnel involved in procurement must maintain the highest ethical standards. 
+- Employees must disclose any actual or potential conflict of interest, including financial interests in a vendor or personal relationships with vendor representatives.
+- Accepting gifts, entertainment, or favors from vendors beyond nominal value ($50) is strictly prohibited.
+
+## 6. Compliance Requirements
+- All purchases must comply with local laws and regulations in Vietnam, including tax laws and import/export restrictions.
+- Deviations from this policy require a formal waiver signed by the Chief Financial Officer (CFO) or Chief Executive Officer (CEO).
+- Non-compliance may result in disciplinary action up to and including termination of employment.

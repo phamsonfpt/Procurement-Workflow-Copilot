@@ -8,6 +8,9 @@ env/
 __pycache__/
 *.pyc
 
+# LightRAG local knowledge graph storage
+lightrag_data/
+
 # Node
 node_modules/
 dist/

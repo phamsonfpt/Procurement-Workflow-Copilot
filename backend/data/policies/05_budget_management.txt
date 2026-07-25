@@ -1,0 +1,32 @@
+# TechCorp Vietnam - Budget and Financial Controls
+Document ID: POL-FIN-005
+Effective Date: January 1, 2026
+Version: 2.0
+
+## 1. Annual Budget Allocation
+Each department is allocated an annual budget approved by the Board of Directors prior to the start of the fiscal year (January 1 - December 31).
+- The budget is divided into distinct Cost Centers and General Ledger (GL) categories (e.g., Software, Hardware, Travel, Marketing).
+- Department Managers are accountable for managing expenditures within their allocated budget.
+
+## 2. Budget Reservation and Checking
+To prevent overspending, TechCorp Vietnam employs strict budget controls integrated into the procurement process.
+- **Budget Check**: Before a Purchase Requisition (PR) can be submitted, the system automatically checks the remaining available budget for the selected Cost Center and GL code.
+- **Reservation**: Upon PR submission, the estimated amount is temporarily "reserved" (encumbered) against the budget.
+- **Commitment**: Once the PO is issued, the reserved amount becomes a firm commitment.
+
+## 3. Over-Budget Procedures
+If a PR exceeds the available budget for a specific category:
+- The system will block submission.
+- The Requester must request a **Budget Transfer** from another category with surplus funds, subject to Finance approval.
+- Alternatively, a **Supplemental Budget Request** must be submitted, which requires a business case and approval from the CFO.
+
+## 4. Budget Splitting (Smurfing) Prevention
+Attempting to bypass approval thresholds by breaking a large purchase into multiple smaller transactions is strictly prohibited.
+- **Control Rule**: If a requester submits multiple PRs within the same category that cumulatively exceed $500 within a 30-day rolling window, the auto-approval threshold is suspended.
+- **Consequence**: All subsequent PRs in that category within the 30-day window will require, at minimum, Manager approval, regardless of the individual PR amount.
+
+## 5. Expense Classification: CAPEX vs. OPEX
+Proper financial classification is critical for tax and accounting purposes.
+- **Capital Expenses (CAPEX)**: Purchases of assets that provide long-term value (over 1 year) and cost more than $2,500 (e.g., servers, company vehicles, significant office renovations). CAPEX requires specific depreciation tracking.
+- **Operating Expenses (OPEX)**: Short-term, day-to-day operational costs (e.g., office supplies, SaaS subscriptions, consulting fees, standard employee laptops).
+- Requesters must select the correct classification; the Finance Team will review and reclassify if necessary.
